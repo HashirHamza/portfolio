@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashir Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5830a4191e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo.png" alt="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <img src="./images/moon.png" id="icon">
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Hello, I'm</p>
+                <h1><span>Hashir Hamza</span><br>I love exploring new things!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/hashirphoto.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p><br>Hi, I'm Hashir Hamza, a self-taught passionate Software developer from India, 
+                        I graduated with a degree in Btech CSE from APJ Abdul Kalam Technological 
+                        University, Kerala.<br><br>During my academic journey, I have gained a solid 
+                        foundation in various programming languages, including Java, Javascript, 
+                        and Python. I have also developed strong problem-solving skills and a keen 
+                        eye for detail through my coursework and hands-on projects. 
+                        </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Education</p>
+                    </div>    
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Language & Database</span><br> Java, JavaScript, HTML, CSS, MySQL</li>
+                            <li><span>Framework</span><br>React, Bootstrap, jQuery </li>
+                            <li><span>Tools & Technologies</span><br>Git, GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022</span><br>Java Full Stack Development From JSpiders, Bangalore.</li>
+                            <li><span>2021</span><br>BTech CSE From APJ Abdul Kalam Technological University(KTU).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work1.png">
+                    <div class="layer">
+                        <h3>HaShopee</h3>
+                        <p>This is an Ecommerce Website build for selling clothes and accessories.
+                            This theme is full responsive and will perform equally well on all screen
+                            resolution.
+                        </p>
+                        <a href="https://github.com/HashirHamza/hashopee-website"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work2.jpg">
+                    <div class="layer">
+                        <h3 style="color: #fff;">Spotify Clone</h3>
+                        <p style="color: #fff;">Spotify Clone with React JS 
+                            with Google account's Sign in feature. Styled to get 15+ songs made by Spotify; clickable songs to get details of the specific songs.
+                        </p>
+                        <a href="https://github.com/HashirHamza/Spotify-clone"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work3.jpg">
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>Weather App implemented in JavaScript, HTML, and CSS. This app will use the OpenWeatherMap API to fetch real-time weather data based on the user's location or city input.
+                        </p>
+                        <a href="https://github.com/HashirHamza/Weather-app"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-envelope"></i>hashirhamza939@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+971 567753295</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="./images/HashirResume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form> 
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©  Hashir Hamza. </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz30N7WvW1gGy-c_q1SayvVcT6fFbIAL6MZQybaxoNv6taOgPZIWe8p4YlqrygnYbO_/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully."
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>
